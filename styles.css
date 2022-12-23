@@ -1,0 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+.jsouter {
+  position: relative;
+  border-radius: 2px;
+  height: 100px;
+  width: 100px;
+  margin: 100px auto 0 auto;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eace2c+0,c8af10+79,c8af10+79,c8af10+79,c8af10+79,c8af10+79 */
+  background: #eace2c; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #eace2c 0%,
+    #c8af10 79%,
+    #c8af10 79%,
+    #c8af10 79%,
+    #c8af10 79%,
+    #c8af10 79%
+  ); /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #eace2c),
+    color-stop(79%, #c8af10),
+    color-stop(79%, #c8af10),
+    color-stop(79%, #c8af10),
+    color-stop(79%, #c8af10),
+    color-stop(79%, #c8af10)
+  ); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    top,
+    #eace2c 00%,
+    #c8af10 79%,
+    #c8af10 79%,
+    #c8af10 79%,
+    #c8af10 79%,
+    #c8af10 79%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    top,
+    #eace2c 0%,
+    #c8af10 79%,
+    #c8af10 79%,
+    #c8af10 79%,
+    #c8af10 79%,
+    #c8af10 79%
+  ); /* Opera 11.10+ */
+  background: -ms-linear-gradient(
+    top,
+    #eace2c 0%,
+    #c8af10 79%,
+    #c8af10 79%,
+    #c8af10 79%,
+    #c8af10 79%,
+    #c8af10 79%
+  ); /* IE10+ */
+  background: linear-gradient(
+    to bottom,
+    #eace2c 0%,
+    #c8af10 79%,
+    #c8af10 79%,
+    #c8af10 79%,
+    #c8af10 79%,
+    #c8af10 79%
+  ); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eace2c', endColorstr='#c8af10',GradientType=0 ); /* IE6-9 */
+}
+.jsinner {
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.9);
+  /*text-shadow: 1px 4px 6px #000, 0 0 0 #000, 1px 4px 6px #222;*/
+  text-shadow: rgb(180, 180, 180) 1px 1px 0px;
+  position: absolute;
+  font-family: 'Noto Sans';
+  top: 10%;
+  left: 30%;
+}
+
+body {
+  background-color: rgb(32, 33, 36);
+}
