@@ -24,7 +24,7 @@ const firstButtonClicked = firstButton.addEventListener(
 );
 //    - Output the second button WITHOUT using the variable in which it's stored
 function secondButtonAction(event) {
-//   document.body.children[2].children[1].style.backgroundColor = 'blue';
+  //   document.body.children[2].children[1].style.backgroundColor = 'blue';
   firstParagraph.className = 'paragraph-background';
 }
 const secondButtonClicked = secondButton.addEventListener(
@@ -37,3 +37,13 @@ const secondButtonClicked = secondButton.addEventListener(
 
 // 5) Solve (4) both by changing the "inline styles" as well as by adding CSS classes
 //    Note: You'll have to add those classes to the styles.css file first!
+
+
+///REFACTOR SYNTAX
+
+const changedToPercentage =document.getElementsByClassName('percentage')[0]
+
+var value = (((1.01 ** 37)-1).toFixed(2));
+var percent = (value * 100) + "%";
+
+changedToPercentage.textContent= (percent);
