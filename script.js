@@ -1,4 +1,3 @@
-/*
 let anchorElement;
 
 anchorElement = document.body.children[1].children[0];
@@ -9,7 +8,6 @@ anchorElement.href = 'http://www.youtube.com';
 // OR
 anchorElement = document.querySelector('p a');
 anchorElement.href = 'http://www.udemy.com';
-*/
 
 // Exercise Time!
 
@@ -31,4 +29,6 @@ heading = document.getElementById('main-title');
 let p1 = document.querySelector('#paragraph');
 // 5. BONUS TASK: Try changing the text content of the <p> element
 //    you selected in (4) and set it to any other text of your choice
-p1.innerHTML = 'Changed via Javascript';
+p1.innerHTML = 'Changed via JavaScript <a id="anchor" href="#">link</a>';
+
+// p1.textContent = 'JavaScript<a id="anchor" href="#">link</a>';
