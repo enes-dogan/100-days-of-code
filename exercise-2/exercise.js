@@ -43,7 +43,7 @@ const secondButtonClicked = secondButton.addEventListener(
 
 const changedToPercentage =document.getElementsByClassName('percentage')[0]
 
-var value = (((1.01 ** 37)-1).toFixed(2));
+var value = (((1.01 ** 40)-1).toFixed(2));
 var percent = (value * 100) + "%";
 
 changedToPercentage.textContent= (percent);
