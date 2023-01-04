@@ -1,0 +1,88 @@
+body {
+  background-color: rgb(243, 233, 255);
+}
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 72px;
+}
+img {
+  width: 550px;
+  height: auto;
+}
+h2 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 36px;
+}
+main {
+  background-color: rgb(119, 79, 216);
+  color: rgb(243, 233, 255);
+  border-radius: 10px;
+  text-align: left;
+  padding: 24px 24px 8px 24px;
+  margin: 64px 160px 0px 160px;
+  /* padding: 32px;
+    margin: 32px auto;
+    width: 700px; 
+    from the course*/
+}
+a {
+  text-decoration: none;
+  color: rgb(119, 79, 216);
+}
+a:hover {
+  text-decoration: none;
+  color: rgb(119, 79, 216);
+  cursor: default;
+}
+/*li{
+    list-style:none
+}
+ul li{
+    padding: 6px 0px;
+}
+my code */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+li {
+  margin: 14px 0;
+  padding-left: 10px;
+  border-left: 5px solid transparent;
+} /*video codes*/
+.highlighted {
+  color: rgb(239, 221, 171);
+  border-color: rgb(247, 209, 85);
+}
+.web-docs {
+  background-color: rgb(245, 230, 165);
+  color: rgb(44, 44, 44);
+  padding: 0px 6px;
+  border-radius: 8px;
+}
+.web-docs:hover,
+.web-docs:active {
+  /*styling is effecting both hover and active psuedos*/
+  cursor: pointer;
+  background-color: rgb(252, 221, 85);
+  color: rgb(44, 44, 44);
+}
+#download-button { /*footer a */
+  color: black;
+  background-color: rgb(249, 201, 39);
+  padding: 12px 20px;
+  border-radius: 8px;
+}
+#download-button:hover {
+  cursor: pointer;
+  background-color: rgb(255, 207, 45);
+  color: white;
+}
+footer p {
+  margin: 36px 0px 48px 0px;
+}
+#academind {
+  color: rgb(124, 110, 135);
+  margin: 0px 0px 28px 0px;
+}
