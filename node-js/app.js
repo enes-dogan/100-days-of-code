@@ -1,22 +1,56 @@
-//---EXPRESS.JS---
-const express = require('express'); // returns function not an object unlike built-in HTTP package
+const fs = require('fs');
+const path = require('path');
+
+const express = require('express');
 
 const app = express();
 
-//get() methods first value is path which we'll listen for incoming request
-// second value is the function we want to execute for the incoming request
-app.get('/currenttime', (req, res) => {
-  //combination of path and req+res handler function is called "route" or "route handler"
+app.use(express.urlencoded({ extended: false })); // incoming data needs to be parsed by the server by using ->
+// middleware function
+app.get('/currenttime', function (req, res) {
   res.send(
     '<h1>' + new Date().toISOString() + '</h1>' + '<a href="/">go back</a>'
   );
-}); //localhost:3000/currenttime
+});
 
 app.get('/', function (req, res) {
-  res.send('<h1> Hello world </h1> <a href="/currenttime">go to time</a>');
-}); //localhost:3000/
+  res.send(
+    '<form action="/store-user" method="POST"><label>Your Name: </label><input type="text" name="username"><button>Submit</button></form>'
+  );
+});
+
+app.post('/store-user', function (req, res) {
+  const userName = req.body.username;
+
+  const filePath = path.join(__dirname, 'data', 'users.json');
+  // path used for file system works cross platform on all operating systems
+
+  //Before we write new data to the file, we have to read it and extract existing
+  // data  out and then we add the new data to existing data and write the updated data bacck into the file
+
+  const fileData = fs.readFileSync(filePath); // Raw data read from the file but the content interpreted as a text
+  const existingUsers = JSON.parse(fileData); // Built-in helper that turns data in the .json format to JavaScript obect or array
+
+  existingUsers.push(userName); //push() method is a default method we can call any array on JS to add (appends) new item into that array
+
+  fs.writeFileSync(filePath, JSON.stringify(existingUsers)); //second param is which data should be written
+  // like readFileSync reads as a raw text, writeFileSync wants a raw text. So using JSON.stringify we translate to raw text that follows the .json format
+  res.send('<h1>Username stored!</h1>');
+});
+
+app.get('/users', function (req, res) {
+  const filePath = path.join(__dirname, 'data', 'users.json');
+
+  const fileData = fs.readFileSync(filePath);
+  const existingUsers = JSON.parse(fileData);
+
+  let responseData = '<ul>';
+
+  for (const user of existingUsers) {
+    responseData += '<li>' + user + '</li>';
+  }
+
+  res.send(responseData);
+});
 
 app.listen(3000);
-
-// We never state the status code `response.statusCode = 200;`
-// Because express will set it to 200 as a default
