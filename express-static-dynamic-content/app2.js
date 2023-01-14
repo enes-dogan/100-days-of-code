@@ -12,10 +12,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
 app.get('/', function (req, res) {
-  res.render('index'); // responsing with ejs engine
-  /*
-  const htmlFilePath = path.join(__dirname, 'views', 'index.html');
-  res.sendFile(htmlFilePath); */ // sending response with express
+  res.render('index');
 });
 
 app.get('/restaurants', function (req, res) {
@@ -24,10 +21,7 @@ app.get('/restaurants', function (req, res) {
   const fileData = fs.readFileSync(filePath);
   const storedRestaurants = JSON.parse(fileData);
 
-  res.render('restaurants', {
-    numberOfRestaurants: storedRestaurants.length,
-    restaurants: storedRestaurants,
-  });
+  res.render('restaurants', { numberOfRestaurants: storedRestaurants.length });
 });
 
 app.get('/recommend', function (req, res) {

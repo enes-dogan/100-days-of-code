@@ -41,6 +41,9 @@ textarea:focus {
   background-color: rgb(252, 234, 197);
 }
 
+textarea {
+  resize: none;
+}
 button {
   cursor: pointer;
   padding: 0.5rem 1.5rem;
