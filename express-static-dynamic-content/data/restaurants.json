@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "name": "Ercan Burger",
+    "address": "Atakent Mah, Çiçekli Vadi Cad, No:1 B1, D:30, 34307 Küçükçekmece/İstanbul",
+    "cuisine": "Hamburgers",
+    "website": "https://www.ercanburger.com/",
+    "description": "Ercan Burgerlerimiz, Ercan Steakhouse restoranımızın menüsünde bulunan vazgeçilmez lezzetlerden biriydi. Ercan Steakhouse, Türk mutfağı klasiklerinin ve zamansız steak’lerin yer aldığı Dünyanın En Büyük Et Restoranı’dır. Zaman içinde, özenle hazırladığımız hamburgerler çok sevildi ve binlerce misafirimiz tarafından sipariş edildi. İşte biz de buradan yola çıkarak herkese sağlıklı burger yedirmek için Türkiye’nin en büyük yerli burger zincirini kurmaya karar verdik.",
+    "id": "454d5b21-4373-4018-8bf2-870b08e3e816"
+  },
+  {
+    "name": "Köfteci Yusuf",
+    "address": "Ziya Gökalp Mah Atatürk Bulvarı Deposite Avm, 34490 Başakşehir",
+    "cuisine": "Turkish",
+    "website": "https://kofteciyusuf.com/istanbul-deposite-avm-kofteci-yusuf.html",
+    "description": "Gıda ve restoran sektöründe hizmet veren Köfteci Yusuf A.Ş. 1996 yılında İznik’te kuruldu. 26 yıldır Türkiye'de faaliyet gösteren Köfteci Yusuf Avrupa standartlarında Türkiye’nin en büyük Köfte Fabrikası unvanına sahip olup, Bursa’da 43, İstanbul’da 65, Ankara’da 17, İzmir’de 26, Balıkesir’de 12, Samsun'da 7, Antalya'da, 9, Kocaeli'de 6, Muğla, Konya, Aydın, Sakarya, ve Eskişehir' de 5, Afyonkarahisar’da 4, Yalova, Denizli’de 3, Uşak'da 2, Bilecik, Kırklareli, Ordu, Kırıkkale, Manisa, Isparta, Tekirdağ, Düzce, Çankırı ve Kayseri'de 2, Çanakkale, Çorum, Kütahya, Amasya, Burdur, Edirne, Zonguldak, Aksaray, Nevşehir ve Kırşehir'de 1’er tane olmak üzere toplam 252 noktada hizmet vermektedir.",
+    "id": "ce5ae25a-3ed9-450c-89e8-797c6424fd12"
+  }
+]
