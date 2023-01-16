@@ -1,8 +1,9 @@
-const fs = require('fs');
 const path = require('path');
 
 const express = require('express');
-const uuid = require('uuid');
+
+const defaultRoutes = require('./routes/default');
+const restaurantRoutes = require('./routes/restaurants');
 
 const app = express();
 
@@ -12,64 +13,9 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
-app.get('/', function (req, res) {
-  res.render('index'); // responsing with ejs engine
-  /*
-  const htmlFilePath = path.join(__dirname, 'views', 'index.html');
-  res.sendFile(htmlFilePath); */ // sending response with express
-});
-
-app.get('/restaurants', function (req, res) {
-  const filePath = path.join(__dirname, 'data', 'restaurants.json');
-
-  const fileData = fs.readFileSync(filePath);
-  const storedRestaurants = JSON.parse(fileData);
-
-  res.render('restaurants', {
-    numberOfRestaurants: storedRestaurants.length,
-    restaurants: storedRestaurants,
-  });
-});
-
-app.get('/restaurants/:id', function (req, res) {
-  const restaurantId = req.params.id;
-  const filePath = path.join(__dirname, 'data', 'restaurants.json');
-
-  const fileData = fs.readFileSync(filePath);
-  const storedRestaurants = JSON.parse(fileData);
-
-  for (const restaurant of storedRestaurants) {
-    if (restaurant.id === restaurantId) {
-      return res.render('restaurant-detail', { restaurant: restaurant });
-    }
-  }
-
-  res.status(404).render('404');
-});
-
-app.get('/recommend', function (req, res) {
-  res.render('recommend');
-});
-
-app.post('/recommend', function (req, res) {
-  const restaurant = req.body;
-  restaurant.id = uuid.v4();
-  restaurants = getStoredRestorants();
-
-  restaurants.push(restaurant);
-
-  storedRestaurants();
-
-  res.redirect('/confirm');
-});
-
-app.get('/confirm', function (req, res) {
-  res.render('confirm');
-});
-
-app.get('/about', function (req, res) {
-  res.render('about');
-});
+app.use('/', defaultRoutes); // All incoming request will be forwarded
+// default if one of the routes matches it will stop otherwise continue
+app.use('/', restaurantRoutes); // after "/" is evaluated
 
 app.use(function (req, res) {
   res.status(404).render('404');

@@ -14,5 +14,21 @@
     "website": "https://kofteciyusuf.com/istanbul-deposite-avm-kofteci-yusuf.html",
     "description": "Gıda ve restoran sektöründe hizmet veren Köfteci Yusuf A.Ş. 1996 yılında İznik’te kuruldu. 26 yıldır Türkiye'de faaliyet gösteren Köfteci Yusuf Avrupa standartlarında Türkiye’nin en büyük Köfte Fabrikası unvanına sahip olup, Bursa’da 43, İstanbul’da 65, Ankara’da 17, İzmir’de 26, Balıkesir’de 12, Samsun'da 7, Antalya'da, 9, Kocaeli'de 6, Muğla, Konya, Aydın, Sakarya, ve Eskişehir' de 5, Afyonkarahisar’da 4, Yalova, Denizli’de 3, Uşak'da 2, Bilecik, Kırklareli, Ordu, Kırıkkale, Manisa, Isparta, Tekirdağ, Düzce, Çankırı ve Kayseri'de 2, Çanakkale, Çorum, Kütahya, Amasya, Burdur, Edirne, Zonguldak, Aksaray, Nevşehir ve Kırşehir'de 1’er tane olmak üzere toplam 252 noktada hizmet vermektedir.",
     "id": "ce5ae25a-3ed9-450c-89e8-797c6424fd12"
+  },
+  {
+    "name": "test4",
+    "address": "test4",
+    "cuisine": "test4",
+    "website": "https://test4.co",
+    "description": "test4",
+    "id": "44ec34b9-1a3c-4c92-812d-e8abd35de4a8"
+  },
+  {
+    "name": "Aaa",
+    "address": "Aaaa",
+    "cuisine": "aaa",
+    "website": "https://aa",
+    "description": "aaa",
+    "id": "9dbd8a55-48fd-414a-85ee-fb749ea5187f"
   }
 ]
