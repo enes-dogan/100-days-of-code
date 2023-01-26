@@ -22,8 +22,42 @@ class Job {
     this.location = place;
     this.salary = income;
   }
+
+  describe() {
+    console.log(
+      `I'm a ${this.title}, I work in ${this.location} and I earn ${this.salary}.`
+    );
+  }
 }
 
 const job3 = new Job('developer', 'india', '100$');
 
 console.log(job3);
+
+job3.describe();
+
+//Object && Array Destructuring
+
+//ARRAY
+const userInput = ['Hello', 'World'];
+
+const firstInput = userInput[0];
+const secondInput = userInput[1];
+// OR a quicker way
+const [ilkGiris, ikinciGiris] = userInput;
+
+console.log(firstInput);/* SAME AS */ console.log(ilkGiris);
+console.log(secondInput);/* SAME AS */ console.log(ikinciGiris);
+
+//OBJECT
+const meslek = {
+  title: 'Developer',
+  location: 'Amsterdam',
+};
+
+const isAdi = meslek.title;
+const isYeri = meslek.location;
+// OR a quicker way
+const {title, location} = meslek;
+//If we wanna asign new names to properties of the object we destructuring
+const {title: meslekTitle, place:meslekPlace} = meslek;
