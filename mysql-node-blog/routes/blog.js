@@ -24,10 +24,9 @@ router.post('/posts', async function (req, res) {
     req.body.content,
     req.body.author,
   ];
-  await db.query(
-    'INSERT INTO posts (title, summary, body, author_id) VALUES (?)',
-    [data]
-  );
+  await db.query('INSERT INTO posts (title, summary, body, author_id) VALUES (?)', [
+    data,
+  ]);
   res.redirect('/posts');
 });
 
