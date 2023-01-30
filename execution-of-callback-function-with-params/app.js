@@ -13,7 +13,7 @@ const goals = [
 ];
 
 function setAsActiveHandler(goalId, event) {
-    console.log(event.target); // event param comes from .addEventListener()
+  console.log(event.target); // event param comes from .addEventListener()
   const selectedGoal = goals.find((g) => g.id === goalId);
   activeGoalElement.textContent = selectedGoal.text;
 }
@@ -27,7 +27,7 @@ function init() {
         `;
     goalElement
       .querySelector('button')
-    //   .addEventListener('click', () => {setAsActiveHandler(goal.id);});
+      //   .addEventListener('click', () => {setAsActiveHandler(goal.id);});
 
       //OR Using .bind()
       .addEventListener('click', setAsActiveHandler.bind(null, goal.id));
@@ -40,3 +40,27 @@ function init() {
 // event that occurs, that default argument woll fed as a last argument parameter
 // line 16 -"event argument only passes if we use `.bind()` method"-
 init();
+
+const diceRollButtonElement = document.getElementById('dice-roll-button');
+const outputSpanElement = document.getElementById('rolled');
+const pastValuesListElement = document.getElementById('past-rolled');
+const deleteLogButtonElement = document.getElementById('delete-btn');
+const pastValuesElement = document.querySelector('ol');
+let result;
+
+function rollDice() {
+  result = Math.floor(Math.random() * 6) + 1;
+  console.log(result);
+  outputSpanElement.textContent = result;
+  const newList = document.createElement('li');
+  newList.textContent = result;
+  pastValuesListElement.append(newList);
+}
+
+function deleteLog() {
+  pastValuesElement.innerHTML = '';
+  outputSpanElement.textContent = '';
+}
+
+diceRollButtonElement.addEventListener('click', rollDice);
+deleteLogButtonElement.addEventListener('click', deleteLog);
