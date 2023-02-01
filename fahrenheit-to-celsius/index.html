@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/script.js" defer></script>
+    <title>Temperature Converter</title>
+  </head>
+  <body>
+    <ul>
+      <li id="f-to-c">
+        <form action="#">
+          <p>Fahrenheit to Celsius</p>
+          <label for="f-input">Enter your value</label>
+          <input
+            type="number"
+            step="0.1"
+            name="f-temperature"
+            id="f-input"
+            required
+          />
+          <button class="btn">Convert</button>
+          <p id="f-result"></p>
+        </form>
+      </li>
+      <li id="c-to-f">
+        <form action="#">
+          <p>Celsius to Fahrenheit</p>
+          <label for="c-input">Enter your value</label>
+          <input
+            type="number"
+            step="0.1"
+            name="c-temperature"
+            id="c-input"
+            required
+          />
+          <button class="btn">Convert</button>
+          <p id="c-result"></p>
+        </form>
+      </li>
+    </ul>
+  </body>
+</html>
