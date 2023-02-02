@@ -11,12 +11,12 @@ async function connect() {
 
 function getDb() {
   if (!database) {
-    throw { message: 'Database connection not established!' };
+    throw { message: 'Database connection not established.' };
   }
   return database;
 }
 
 module.exports = {
   connectToDatabase: connect,
-  getDb: getDb
+  getDb: getDb,
 };
