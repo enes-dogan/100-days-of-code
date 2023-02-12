@@ -15,7 +15,9 @@ function signupHandler(event) {
   }
 
   if (enteredPassword.trim().length <= 5) {
-    alert('Invalid input - pasasword must be 6 characters or longer.');
+    alert(`
+    Invalid input - pasasword must be 6 characters or longer.
+    `);
     return;
   }
 
