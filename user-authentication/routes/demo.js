@@ -10,11 +10,35 @@ router.get('/', function (req, res) {
 });
 
 router.get('/signup', function (req, res) {
-  res.render('signup');
+  let sessionInputData = req.session.inputData;
+
+  if (!sessionInputData) {
+    sessionInputData = {
+      hasError: false,
+      email: '',
+      confirmEmail: '',
+      password: '',
+    };
+  }
+
+  req.session.inputData = null;
+
+  res.render('signup', { inputData: sessionInputData });
 });
 
 router.get('/login', function (req, res) {
-  res.render('login');
+  let sessionInputData = req.session.inputData;
+
+  if (!sessionInputData) {
+    sessionInputData = {
+      hasError: false,
+      email: '',
+      password: '',
+    };
+  }
+
+  req.session.inputData = null;
+  res.render('login', { inputData: sessionInputData });
 });
 
 router.post('/signup', async function (req, res) {
@@ -31,8 +55,18 @@ router.post('/signup', async function (req, res) {
     enteredEmail !== enteredConfirmEmail ||
     !enteredEmail.includes('@')
   ) {
-    console.log('Invalid data.');
-    return res.redirect('/signup');
+    req.session.inputData = {
+      hasError: true,
+      message: 'Invalid input - please check your data.',
+      email: enteredEmail,
+      confirmEmail: enteredConfirmEmail,
+      password: enteredPassword,
+    };
+
+    req.session.save(function () {
+      res.redirect('/signup');
+    });
+    return;
   }
 
   const existingUser = await db
@@ -41,8 +75,17 @@ router.post('/signup', async function (req, res) {
     .findOne({ email: enteredEmail });
 
   if (existingUser) {
-    console.log('User exist already.');
-    return res.redirect('/signup');
+    req.session.inputData = {
+      hasError: true,
+      message: 'User exist already.',
+      email: enteredEmail,
+      confirmEmail: enteredConfirmEmail,
+      password: enteredPassword,
+    };
+    req.session.save(function () {
+      res.redirect('/signup');
+    });
+    return;
   }
 
   const hashedPassword = await bcrypt.hash(enteredPassword, 12);
@@ -68,8 +111,16 @@ router.post('/login', async function (req, res) {
     .findOne({ email: enteredEmail });
 
   if (!existingUser) {
-    console.log('Could not log in, email not found.');
-    return res.redirect('/login');
+    req.session.inputData = {
+      hasError: true,
+      message: 'Could not log in, check your email.',
+      email: enteredEmail,
+      password: enteredPassword,
+    };
+    req.session.save(function () {
+      res.redirect('/login');
+    });
+    return;
   }
 
   const passwordsAreEqual = await bcrypt.compare(
@@ -78,19 +129,51 @@ router.post('/login', async function (req, res) {
   );
 
   if (!passwordsAreEqual) {
-    console.log('Could not log in, wrong password.');
-    return res.redirect('/login');
+    req.session.inputData = {
+      hasError: true,
+      message: 'Could not log in, check your password.',
+      email: enteredEmail,
+      password: enteredPassword,
+    };
+    req.session.save(function () {
+      res.redirect('/login');
+    });
+    return;
   }
 
   req.session.user = { id: existingUser._id, email: existingUser.email };
+  req.session.isAuthenticated = true;
+  req.session.save(function () {
+    res.redirect('/profile'); // express-session package will execute save() after
+  }); // the writing session to database finished. So, we prevent to redirecting
+}); // restricted /admin page before session saved.
 
-  res.redirect('/admin');
-});
+router.get('/admin', async function (req, res) {
+  if (!req.session.isAuthenticated) {
+    // if (!req.session.user)
+    return res.status(401).render('401');
+  }
 
-router.get('/admin', function (req, res) {
+  const user = await db.getDb().collection('users').findOne({_id: req.session.user.id})
+
+  if (!user || !user.isAdmin) {
+    return res.status(403).render('403'); 
+  }
   res.render('admin');
 });
 
-router.post('/logout', function (req, res) {});
+router.get('/profile', function (req, res) {
+  if (!req.session.isAuthenticated) {
+    // if (!req.session.user)
+    return res.status(401).render('401');
+  }
+  res.render('profile');
+});
+
+router.post('/logout', function (req, res) {
+  req.session.user = null;
+  req.session.isAuthenticated = false;
+  res.redirect('/');
+});
 
 module.exports = router;
