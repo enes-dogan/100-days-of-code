@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(session(sessionConfig.createSessionConfig(mongoDbSessionStore)));
 app.use(csrf());
 
-app.use(authMiddleware.auth);
+app.use(authMiddleware);
 
 app.use(authRoutes);
 app.use(blogRoutes);
