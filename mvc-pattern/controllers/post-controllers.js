@@ -75,12 +75,7 @@ async function updatePost(req, res) {
     enteredTitle.trim() === '' ||
     enteredContent.trim() === ''
   ) {
-    req.session.inputData = {
-      hasError: true,
-      message: 'Invalid input - please check your data.',
-      title: enteredTitle,
-      content: enteredContent,
-    };
+    
 
     res.redirect(`/posts/${req.params.id}/edit`);
     return;
