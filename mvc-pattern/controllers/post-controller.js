@@ -1,7 +1,6 @@
 const Post = require('../models/post');
 const validationSession = require('../util/validation-session');
 const validation = require('../util/validation');
-const { postIsValid } = require('../util/validation');
 
 function getHome(req, res) {
   res.render('welcome');
@@ -96,10 +95,9 @@ async function updatePost(req, res) {
   res.redirect('/admin');
 }
 
-async function deltePost(req, res) {
+async function deletePost(req, res) {
   const post = new Post(null, null, req.params.id);
   await post.delete();
-
   res.redirect('/admin');
 }
 
@@ -109,5 +107,5 @@ module.exports = {
   createPost: createPost,
   getSinglePost: getSinglePost,
   updatePost: updatePost,
-  deltePost: deltePost,
+  deletePost: deletePost,
 };

@@ -23,6 +23,7 @@ function createSessionConfig(sessionStore) {
     },
   };
 }
+
 module.exports = {
   createSessionStore: createSessionStore,
   createSessionConfig: createSessionConfig,
