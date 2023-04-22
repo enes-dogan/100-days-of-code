@@ -13,8 +13,8 @@ const TodosApp = {
       if (this.editedTodoId) {
         //Updating existing todo
         const todoId = this.editedTodoId; // "this" keyword doesn't refer the
-        // data object if its inside a function. so storing inside const and then passing
-        // into function is a workaround to that
+        // data object if its inside a nested function. so storing inside const and then
+        // passing into function is a workaround to that
         const todoIndex = this.todos.findIndex(function (todoItem) {
           return todoItem.id === todoId;
         });
@@ -25,6 +25,7 @@ const TodosApp = {
         };
 
         this.todos[todoIndex] = updatedTodoItem;
+        this.editedTodoId = null;
       } else {
         //Creating new todo
         const newTodo = {
@@ -42,6 +43,11 @@ const TodosApp = {
         return todoItem.id === todoId;
       });
       this.enteredTodoText = todo.text;
+    },
+    deleteTodo(todoId) {
+      this.todos = this.todos.filter(function (todoItem) {
+        return todoItem.id !== todoId;
+      });
     },
   },
 };
