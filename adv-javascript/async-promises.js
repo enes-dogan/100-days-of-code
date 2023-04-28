@@ -8,12 +8,15 @@ function readFile() {
       console.log(data.toString());
       // return anotherAsyncOperation;
     })
-    .then(function () {})
+    .then(function () {
+      console.log('Hi there.'); // executes only after async readFile() is done
+    })
     .catch(function (error) {
       console.log(error);
     });
 
-  console.log('Hi there.');
+    console.log('Executes asap.'); // don't wait while fs.readFile() is working
+
 }
 
 console.log('Hello world.');

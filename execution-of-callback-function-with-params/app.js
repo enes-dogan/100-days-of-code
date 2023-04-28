@@ -1,3 +1,29 @@
+const diceRollButtonElement = document.getElementById('dice-roll-button');
+const outputSpanElement = document.getElementById('rolled');
+const pastValuesListElement = document.getElementById('past-rolled');
+const deleteLogButtonElement = document.getElementById('delete-btn');
+const pastValuesElement = document.querySelector('ol');
+let result;
+
+function rollDice() {
+  result = Math.floor(Math.random() * 6) + 1;
+  console.log(result);
+  outputSpanElement.textContent = result;
+  const newList = document.createElement('li');
+  newList.textContent = result;
+  pastValuesListElement.append(newList);
+}
+
+function deleteLog() {
+  pastValuesElement.innerHTML = '';
+  outputSpanElement.textContent = '';
+}
+
+diceRollButtonElement.addEventListener('click', rollDice);
+deleteLogButtonElement.addEventListener('click', deleteLog);
+
+
+/* 
 const activeGoalElement = document.querySelector('#active-goal h2');
 const goalListElement = document.querySelector('#all-goals ul');
 
@@ -41,26 +67,4 @@ function init() {
 // line 16 -"event argument only passes if we use `.bind()` method"-
 init();
 
-const diceRollButtonElement = document.getElementById('dice-roll-button');
-const outputSpanElement = document.getElementById('rolled');
-const pastValuesListElement = document.getElementById('past-rolled');
-const deleteLogButtonElement = document.getElementById('delete-btn');
-const pastValuesElement = document.querySelector('ol');
-let result;
-
-function rollDice() {
-  result = Math.floor(Math.random() * 6) + 1;
-  console.log(result);
-  outputSpanElement.textContent = result;
-  const newList = document.createElement('li');
-  newList.textContent = result;
-  pastValuesListElement.append(newList);
-}
-
-function deleteLog() {
-  pastValuesElement.innerHTML = '';
-  outputSpanElement.textContent = '';
-}
-
-diceRollButtonElement.addEventListener('click', rollDice);
-deleteLogButtonElement.addEventListener('click', deleteLog);
+*/

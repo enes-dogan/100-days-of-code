@@ -38,7 +38,7 @@ job3.describe();
 
 //Object && Array Destructuring
 
-//ARRAY
+//ARRAY destructuring 
 const userInput = ['Hello', 'World'];
 
 const firstInput = userInput[0];
@@ -49,15 +49,15 @@ const [ilkGiris, ikinciGiris] = userInput;
 console.log(firstInput);/* SAME AS */ console.log(ilkGiris);
 console.log(secondInput);/* SAME AS */ console.log(ikinciGiris);
 
-//OBJECT
-const meslek = {
+//OBJECT destructuring 
+const jobb = {
   title: 'Developer',
   location: 'Amsterdam',
 };
 
-const isAdi = meslek.title;
-const isYeri = meslek.location;
+const isAdi = jobb.title;
+const isYeri = jobb.location;
 // OR a quicker way
-const {title, location} = meslek;
+const {title, location} = jobb;
 //If we wanna asign new names to properties of the object we destructuring
-const {title: meslekTitle, place:meslekPlace} = meslek;
+const {title: jobbTitle, place:jobbPlace} = jobb;

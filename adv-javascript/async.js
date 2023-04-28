@@ -10,9 +10,9 @@ function readFile() {
     }
   });
 
-  console.log('Hi there.');
+  console.log('Hi there.'); // without async this code doesn't wait.
 }
-
-console.log('Hello world.');
-
 readFile();
+
+console.log('Test.'); // without async this code doesn't wait.
+
