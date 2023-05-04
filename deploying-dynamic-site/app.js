@@ -15,13 +15,13 @@ app.use(express.static('public'));
 
 app.use(mainRoutes);
 
-app.use(function(error, req, res, next) {
+app.use(function (error, req, res, next) {
   res.status(500).render('500');
-})
+});
 
 db.initDatabase()
   .then(function () {
-    app.listen(3000);
+    app.listen(port);
   })
   .catch(function (error) {
     console.log('Connecting to the database failed!');
