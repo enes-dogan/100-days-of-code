@@ -150,7 +150,7 @@ function saveTodo(event) {
 
 function startTodoEditing(event) {
   const clickedButtonElement = event.target;
-  editedTodoElement = clickedButtonElement.parentElement.parentElement; // the <li>
+  editedTodoElement = clickedButtonElement.parentElement.parentElement;
   const currentText = editedTodoElement.firstElementChild.textContent;
 
   todoFormElement.querySelector('input').value = currentText;
