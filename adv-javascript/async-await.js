@@ -17,8 +17,3 @@ async function readFile() {
 readFile();
 
 console.log('Hello world.');
-
-//?  Hello world.
-//!  ==Data from the text file.==
-//*  File parsing done.
-//?  Hi there.
