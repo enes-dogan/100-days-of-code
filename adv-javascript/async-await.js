@@ -5,8 +5,8 @@ const fs = require('fs/promises');
 async function readFile() {
   try {
     const data = await fs.readFile('data.txt');
-    console.log('File parsing done.');
     console.log(data.toString());
+    console.log('File parsing done.');
   } catch (error) {
     console.log(error);
   }
@@ -14,6 +14,11 @@ async function readFile() {
   console.log('Hi there.');
 }
 
+readFile();
+
 console.log('Hello world.');
 
-readFile();
+//?  Hello world.
+//!  ==Data from the text file.==
+//*  File parsing done.
+//?  Hi there.
