@@ -1,4 +1,3 @@
-//? ---------------------------------------------------------------------------------
 const userNumberInput = document.getElementById('user-number');
 const calculateSumButton =
   document.querySelector('.control ').nextElementSibling;
@@ -24,7 +23,6 @@ function calculateSum(event) {
   }
 }
 
-//? ---------------------------------------------------------------------------------
 const highlightButton = document.querySelector('#highlight-links button');
 const links = document.querySelectorAll('#highlight-links a');
 
@@ -36,7 +34,6 @@ function highlightLinks(event) {
 
 highlightButton.addEventListener('click', highlightLinks);
 
-//? ---------------------------------------------------------------------------------
 const displayUserDataButton = document.querySelector('#user-data button');
 const outputUserData = document.querySelector('#output-user-data');
 
@@ -55,7 +52,7 @@ function showUserInfo(event) {
     outputUserData.append(list);
   }
 }
-//? ---------------------------------------------------------------------------------
+
 const diceInput = document.getElementById('user-target-number');
 const diceRollButton = document.querySelector('#statistics button');
 const diceRollsList = document.getElementById('dice-rolls');
@@ -89,5 +86,3 @@ function outPutDiceRolls(event) {
     targetNumber.textContent = diceInputValue;
   }
 }
-
-//* 20/06/23

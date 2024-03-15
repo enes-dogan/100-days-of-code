@@ -19,7 +19,7 @@ async function getMainPage(req, res, next) {
     month: 'short',
     year: 'numeric',
     hour: 'numeric',
-    minute: 'numeric'
+    minute: 'numeric',
   });
 
   res.render('main', { numberOfLikes: likes.length, lastLikedDate: lastLiked });

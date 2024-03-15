@@ -22,7 +22,6 @@ function deleteLog() {
 diceRollButtonElement.addEventListener('click', rollDice);
 deleteLogButtonElement.addEventListener('click', deleteLog);
 
-
 /* 
 const activeGoalElement = document.querySelector('#active-goal h2');
 const goalListElement = document.querySelector('#all-goals ul');

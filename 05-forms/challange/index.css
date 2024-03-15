@@ -1,46 +1,46 @@
-body{
-    background-color: rgb(236,252,253);
-    padding: 2rem 1em;
-    font-family: sans-serif;
-    font-size: 1.2rem;
+body {
+  background-color: rgb(236, 252, 253);
+  padding: 2rem 1em;
+  font-family: sans-serif;
+  font-size: 1.2rem;
 }
 
-h1{
-    text-align: center;
-    margin: 2rem;
+h1 {
+  text-align: center;
+  margin: 2rem;
 }
 
-form{
-    border: 1px solid rgba(105, 105, 105,0.2);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    border-radius: 6px;
-    background-color: rgb(239, 246, 253);
-    padding: 1.5rem;
-    width: 50%;
-    margin: 0 auto;
+form {
+  border: 1px solid rgba(105, 105, 105, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-color: rgb(239, 246, 253);
+  padding: 1.5rem;
+  width: 50%;
+  margin: 0 auto;
 }
-section{
-    text-align: left;
+section {
+  text-align: left;
 }
-ul{
-    list-style: none;
-    padding: 0;
-    margin-bottom: 1rem;
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
 }
 
 #first input,
 #first select,
-#first textarea{
-    resize: none;
-    width: 95%;
-    font-size: 1.1rem;
-    font: inherit;
-    margin-bottom: 0.4rem;
-    padding: 0.5rem;
-    border-radius: 4px;
-    border: 1px solid rgb(152, 159, 184);
-    box-sizing: border-box;
-    display: block;
+#first textarea {
+  resize: none;
+  width: 95%;
+  font-size: 1.1rem;
+  font: inherit;
+  margin-bottom: 0.4rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgb(152, 159, 184);
+  box-sizing: border-box;
+  display: block;
 }
 
 input:focus,
@@ -50,59 +50,53 @@ textarea:focus {
   border-color: rgb(32, 5, 63);
 }
 
-label{
-    width: 100%;
-    display: block;
-    margin: 1rem 0 0 0;
-    font-size: 1.1rem;
-    color: rgb(34, 43, 61);
+label {
+  width: 100%;
+  display: block;
+  margin: 1rem 0 0 0;
+  font-size: 1.1rem;
+  color: rgb(34, 43, 61);
 }
 
-#contact label{
-    display: inline;
+#contact label {
+  display: inline;
 }
 
-select{
-    display: block;
+select {
+  display: block;
 }
 
-#buttons{
-    display: flex;
-    justify-content: right;
-    gap: 0.5rem;
+#buttons {
+  display: flex;
+  justify-content: right;
+  gap: 0.5rem;
 }
 
-button{
-    margin-top: 1rem;
-    background-color: rgb(48, 58, 89);
-    border: 2px solid rgb(48, 58, 89);
-    border-radius: 4px;
-    padding: 0.5rem 2rem;
-    color: rgb(255,255,255);
-    font-weight: bold;
-    font: inherit;
+button {
+  margin-top: 1rem;
+  background-color: rgb(48, 58, 89);
+  border: 2px solid rgb(48, 58, 89);
+  border-radius: 4px;
+  padding: 0.5rem 2rem;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font: inherit;
 }
 
-button:hover{
-    cursor: pointer;
-    background-color: rgb(64, 78, 119);
-    border: 2px solid rgb(64, 78, 119);
+button:hover {
+  cursor: pointer;
+  background-color: rgb(64, 78, 119);
+  border: 2px solid rgb(64, 78, 119);
 }
 
-#clear{
-    background-color: rgb(255, 255, 255);
-    border: 2px solid rgb(48, 58, 89);
-    color: rgb(0,0,0);
+#clear {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(48, 58, 89);
+  color: rgb(0, 0, 0);
 }
 
-#clear:hover{
-    cursor: pointer;
-    border: 2px solid rgb(64, 78, 119);
-    color: rgb(112, 112, 112);
+#clear:hover {
+  cursor: pointer;
+  border: 2px solid rgb(64, 78, 119);
+  color: rgb(112, 112, 112);
 }
-
-/* @media (min-width: 47rem) {
-    body{
-        padding: 8rem 5rem;
-    }
-} */

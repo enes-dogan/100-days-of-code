@@ -7,32 +7,19 @@ html {
   --color-primary-300: rgb(167, 226, 255);
   --color-primary-700: rgb(0, 170, 255);
 
-  background-color: var(--color-grey-100); /*variable*/
-  font-family: "Krub", sans-serif;
+  background-color: var(--color-grey-100);
+  font-family: 'Krub', sans-serif;
   font-weight: 400;
 }
-/*
-  *(asterisk selector simply selects all elements of 
-  the HTML document. And this means that the CSS rules 
-  are directly applied to all elements. Specificity still 
-  plays a role though but the difference between the 
-  HTML and :root selector versus the asterisk selector, is that,
-  for the HTML and :root selector the rules are inherited 
-  by nested elements. Whereas, the asterisk selector directly 
-  adds the rules to all elements inside our HTML document.
-*/
+
 .card-container {
   background-color: rgb(255, 255, 255);
   width: 350px;
   margin: 50px auto;
   box-shadow: 3px 3px 10px rgb(201, 200, 200);
   transition: transform 0.5s ease-out 1ms;
-  /*
-   The code required to implement the transition
-   is applied to the initial state of the element,
-   not on the event, triggering the transition.
-  */
 }
+
 .card-container:hover {
   transform: scale(1.05);
 }
@@ -42,7 +29,7 @@ h1 {
   text-align: left;
   padding: 30px 50px 0px 50px;
   margin: 10px 0;
-  font-family: "Zilla Slab", serif;
+  font-family: 'Zilla Slab', serif;
   font-weight: 600;
 }
 

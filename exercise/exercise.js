@@ -38,12 +38,11 @@ const secondButtonClicked = secondButton.addEventListener(
 // 5) Solve (4) both by changing the "inline styles" as well as by adding CSS classes
 //    Note: You'll have to add those classes to the styles.css file first!
 
-
 ///REFACTOR SYNTAX
 
-const changedToPercentage =document.getElementsByClassName('percentage')[0]
+const changedToPercentage = document.getElementsByClassName('percentage')[0];
 
-var value = (((1.01 ** 40)-1).toFixed(2));
-var percent = (value * 100) + "%";
+var value = (1.01 ** 40 - 1).toFixed(2);
+var percent = value * 100 + '%';
 
-changedToPercentage.textContent= (percent);
+changedToPercentage.textContent = percent;

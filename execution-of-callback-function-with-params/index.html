@@ -20,28 +20,28 @@
     </section>
     <script>
       const diceRollButtonElement = document.getElementById('dice-roll-button');
-const outputSpanElement = document.getElementById('rolled');
-const pastValuesListElement = document.getElementById('past-rolled');
-const deleteLogButtonElement = document.getElementById('delete-btn');
-const pastValuesElement = document.querySelector('ol');
-let result;
+      const outputSpanElement = document.getElementById('rolled');
+      const pastValuesListElement = document.getElementById('past-rolled');
+      const deleteLogButtonElement = document.getElementById('delete-btn');
+      const pastValuesElement = document.querySelector('ol');
+      let result;
 
-function rollDice() {
-  result = Math.floor(Math.random() * 6) + 1;
-  console.log(result);
-  outputSpanElement.textContent = result;
-  const newList = document.createElement('li');
-  newList.textContent = result;
-  pastValuesListElement.append(newList);
-}
+      function rollDice() {
+        result = Math.floor(Math.random() * 6) + 1;
+        console.log(result);
+        outputSpanElement.textContent = result;
+        const newList = document.createElement('li');
+        newList.textContent = result;
+        pastValuesListElement.append(newList);
+      }
 
-function deleteLog() {
-  pastValuesElement.innerHTML = '';
-  outputSpanElement.textContent = '';
-}
+      function deleteLog() {
+        pastValuesElement.innerHTML = '';
+        outputSpanElement.textContent = '';
+      }
 
-diceRollButtonElement.addEventListener('click', rollDice);
-deleteLogButtonElement.addEventListener('click', deleteLog);
+      diceRollButtonElement.addEventListener('click', rollDice);
+      deleteLogButtonElement.addEventListener('click', deleteLog);
     </script>
   </body>
 </html>

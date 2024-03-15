@@ -7,7 +7,6 @@ function getHome(req, res) {
 }
 
 async function getAdmin(req, res) {
-
   const posts = await Post.fetchAll();
 
   sessionErrorData = validationSession.getSessionErrorData(req, {
@@ -50,7 +49,7 @@ async function createPost(req, res) {
 async function getSinglePost(req, res, next) {
   let post;
   try {
-   post = new Post(null, null, req.params.id);
+    post = new Post(null, null, req.params.id);
   } catch (error) {
     // next(error);
     return res.render('404');

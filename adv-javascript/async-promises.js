@@ -1,4 +1,3 @@
-// .then()
 const fs = require('fs/promises');
 
 function readFile() {
@@ -6,7 +5,6 @@ function readFile() {
     .then(function (data) {
       console.log('File parsing done.');
       console.log(data.toString());
-      // return anotherAsyncOperation;
     })
     .then(function () {
       console.log('Hi there.'); // executes only after async readFile() is done
@@ -15,8 +13,7 @@ function readFile() {
       console.log(error);
     });
 
-    console.log('Executes asap.'); // don't wait while fs.readFile() is working
-
+  console.log('Executes asap.'); // don't wait while fs.readFile() is working
 }
 
 console.log('Hello world.');

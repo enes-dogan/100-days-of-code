@@ -1,22 +1,27 @@
 header {
   margin: 16px 0px;
 }
+
 h1 {
   margin: 0px;
 }
+
 h2 {
   color: rgb(78, 13, 5);
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
+
 main p {
   margin: 12px;
   color: rgb(71, 29, 22);
 }
+
 .highlight-goal {
   background-color: rgb(235, 86, 66);
   /* .class has more speficity over main p
      .class can used more than 1 elements */
 }
+
 a {
   text-decoration: none;
   font-size: 24px;
@@ -28,17 +33,20 @@ a {
   /*using for inline element's top and bottom margin behaves
   like a block element*/
 }
+
 a:hover {
   text-decoration: none;
   color: rgb(177, 177, 177);
   background-color: rgb(180, 39, 60);
   border: none;
 }
+
 ol {
   padding: 0px;
   width: 500px;
   margin: 36px auto 0 auto;
 }
+
 li {
   list-style: none;
   background-color: rgb(223, 136, 124);

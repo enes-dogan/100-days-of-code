@@ -3,15 +3,18 @@ body {
   margin: 8rem;
   font-family: Helvetica, sans-serif;
 }
+
 h1 {
   text-align: center;
   color: rgb(255, 255, 255);
 }
-ul{
+
+ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
+
 form {
   width: 30rem;
   margin: 3rem auto;
@@ -19,56 +22,62 @@ form {
   padding: 1rem;
   border-radius: 6px;
 }
+
 label {
   margin-bottom: 0.5rem;
   display: block;
 }
+
 input,
 textarea,
-select{
+select {
   width: 100%;
   display: block;
   margin-bottom: 1rem;
-  font: inherit; /*styles inherited from ancestor
-  has higher spiecificty compared to the browser
-  default styles*/
-  border: 1px solid rgb(184,184,184);
+  font: inherit;
+  border: 1px solid rgb(184, 184, 184);
   padding: 0.25rem;
   box-sizing: border-box;
-  color:rgb(61, 58, 58);
-  /* background-color: rgb(204, 157, 255); */
+  color: rgb(61, 58, 58);
 }
-textarea{
+
+textarea {
   resize: vertical;
 }
+
 input:focus,
 textarea:focus {
   background-color: rgb(219, 190, 253);
   color: rgb(32, 5, 63);
   border-color: rgb(32, 5, 63);
 }
-button{
-display: block;
-font: inherit;
-background-color: rgb(32, 5, 63);
-color: white;
-border: 1px solid  rgb(32, 5, 63);
-padding: 0.5rem 1.5rem;
-border-radius: 4px;
-cursor: pointer;
-margin-bottom: 1rem;
+
+button {
+  display: block;
+  font: inherit;
+  background-color: rgb(32, 5, 63);
+  color: white;
+  border: 1px solid rgb(32, 5, 63);
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 1rem;
 }
+
 button:hover {
   background-color: rgb(52, 14, 95);
   border-color: rgb(52, 14, 95);
 }
-#buttons{
+
+#buttons {
   display: flex;
   justify-content: space-between;
 }
+
 .form-control-inline {
   display: flex;
 }
+
 .form-control-inline input {
   width: auto;
   margin-right: 0.5rem;

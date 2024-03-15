@@ -31,7 +31,7 @@ async function fetchCommentsForPost(event) {
     }
     const responseData = await response.json();
 
-    if (responseData && responseData.length > 1) {
+    if (responseData && responseData.length > 0) {
       const commentsListElement = createCommentsList(responseData);
       commentsSectionElement.innerHTML = '';
       commentsSectionElement.appendChild(commentsListElement);

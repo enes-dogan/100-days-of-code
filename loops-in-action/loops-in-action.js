@@ -96,8 +96,11 @@ function deriveNumberOfDiceRolls() {
       newRollListItemElement.textContent = outputText;
       diceRollsListElement.append(newRollListItemElement);
     }
-    const outputTotalRollsElement = document.getElementById('output-total-rolls');
-    const outputTargetNumberElement = document.getElementById('output-target-number');
+    const outputTotalRollsElement =
+      document.getElementById('output-total-rolls');
+    const outputTargetNumberElement = document.getElementById(
+      'output-target-number'
+    );
 
     outputTargetNumberElement.textContent = enteredNumber;
     outputTotalRollsElement.textContent = numberOfRolls;

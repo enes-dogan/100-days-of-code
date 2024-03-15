@@ -1,5 +1,4 @@
 /* All posts page */
-
 h1 {
   text-align: left;
 }
@@ -42,7 +41,6 @@ h1 {
 }
 
 /* Post detail page */
-
 #post-meta {
   color: rgb(156, 149, 149);
 }

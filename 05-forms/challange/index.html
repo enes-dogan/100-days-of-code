@@ -40,7 +40,7 @@
                 id="phonenumber"
                 required
                 placeholder="+90 512 456 7890"
-                minlength="13s
+                minlength="13s"
               />
             </li>
             <li>
@@ -68,24 +68,46 @@
           <h2>How should we reply?</h2>
           <ul>
             <li>
-              <input type="radio" name="reply" id="reply-phone" value="call" required/>
+              <input
+                type="radio"
+                name="reply"
+                id="reply-phone"
+                value="call"
+                required
+              />
               <label for="reply-phone">Call me</label>
             </li>
             <li>
-              <input type="radio" name="reply" id="reply-email" value="email" required/>
+              <input
+                type="radio"
+                name="reply"
+                id="reply-email"
+                value="email"
+                required
+              />
               <label for="reply-email">Send me an email</label>
             </li>
             <li>
-              <input type="radio" name="reply" id="reply-none" value="dont" required/>
+              <input
+                type="radio"
+                name="reply"
+                id="reply-none"
+                value="dont"
+                required
+              />
               <label for="reply-none">Don't reply</label>
             </li>
           </ul>
           <div>
-            <input type="checkbox" name="accept-terms" id="accept-terms" required/>
+            <input
+              type="checkbox"
+              name="accept-terms"
+              id="accept-terms"
+              required
+            />
             <label for="accept-terms">Accept Terms</label>
           </div>
         </section>
-
         <section id="buttons">
           <button type="reset" id="clear">Clear</button>
           <button type="submit">Submit</button>

@@ -3,16 +3,15 @@ function greetUser(greetingPrefix, name = 'user') {
   console.log(greetingPrefix + ' ' + name + '!');
 }
 
-greetUser('hi', 'enes');
-greetUser('hello');
+greetUser('hi', 'enes'); // hi enes!
+greetUser('hello'); // hello user!
 
 // Rest Parameters && Spead Operator
 
 function sumUp(num1, num2, num3) {
   return num1 + num2 + num3;
 }
-// Limitation with this functions is we can -actually must-
-// accept 3 parameters and not very flexible
+// Limitation with this functions is we must accept 3 parameters and not very flexible
 console.log(sumUp(1, 2)); // NaN  (undefined + integer)
 
 //Array method
@@ -75,7 +74,7 @@ function myFunc2() {
 
 myFunc2();
 
-const myFunc3 = (arg) => {
+const myFunc3 = arg => {
   console.log(arg);
 };
 
@@ -87,7 +86,7 @@ const multiply = number => {
 
 console.log(multiply(4));
 
-const multiply2 = (number) => number * 4; //return in one line
+const multiply2 = number => number * 4; //return in one line
 
 console.log(multiply2(3));
 
@@ -192,7 +191,7 @@ console.log(newSapien2); // {homoSapien: {name: 'John', surname: 'Doe'}, age: 35
 // Rest
 
 const filter = (...params) => {
-  return params.filter((el) => el === 1); // with arrow function
+  return params.filter(el => el === 1); // with arrow function
 };
 
 console.log(filter(1, 2, 3));
@@ -215,10 +214,7 @@ function factor(num) {
   }
 }
 
-
-console.log(factor(6))
-
-
+console.log(factor(6));
 
 function factorial(num) {
   if (num < 0) {
@@ -226,12 +222,11 @@ function factorial(num) {
   } else if (num == 0) {
     return 1; // factorial of 0 is 1
   } else {
-    return (num * factorial(num - 1)); // recursive call to calculate factorial
+    return num * factorial(num - 1); // recursive call to calculate factorial
   }
 }
 
 console.log(factorial(5)); // prints 120
-
 
 function factorial2(num) {
   if (num < 0) {
