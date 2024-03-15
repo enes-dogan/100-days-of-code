@@ -17,7 +17,8 @@ class Todo {
   }
 
   save() {
-    if (this.id) { // Update existing todo if id exists
+    if (this.id) {
+      // Update existing todo if id exists
       const todoId = new mongodb.ObjectId(this.id);
       return db
         .getDb()

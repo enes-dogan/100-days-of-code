@@ -155,7 +155,7 @@ router.get('/admin', async function (req, res) {
   }
 
   if (!res.locals.isAdmin) {
-    return res.status(403).render('403'); 
+    return res.status(403).render('403');
   }
   res.render('admin');
 });

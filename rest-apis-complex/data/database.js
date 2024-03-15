@@ -19,5 +19,5 @@ function getDb() {
 
 module.exports = {
   initDb: initDb,
-  getDb: getDb
+  getDb: getDb,
 };

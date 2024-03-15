@@ -149,7 +149,6 @@ router.post('/login', async function (req, res) {
   });
 });
 
-
 router.get('/transaction', function (req, res) {
   if (!res.locals.isAuth) {
     return res.status(401).render('401');
@@ -158,7 +157,7 @@ router.get('/transaction', function (req, res) {
   res.render('transaction', { csrfToken: csrfToken });
 });
 
-router.post('/transaction', async function(req, res) {
+router.post('/transaction', async function (req, res) {
   if (!res.locals.isAuth) {
     return res.redirect('/login');
   }
@@ -166,15 +165,15 @@ router.post('/transaction', async function(req, res) {
   const transaction = {
     sender: res.locals.user.email, // parsed from session in app.js
     recipient: req.body.recipient,
-    amount: +req.body.amount // "+" to convert to number
-  }
+    amount: +req.body.amount, // "+" to convert to number
+  };
 
   await db.getDb().collection('transactions').insertOne(transaction);
 
   res.redirect('success');
-})
+});
 
-router.get('/success', function(req, res) {
+router.get('/success', function (req, res) {
   res.render('success');
 });
 

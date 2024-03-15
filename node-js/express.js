@@ -1,4 +1,4 @@
-//---EXPRESS.JS---
+// ---EXPRESS.JS---
 const express = require('express'); // returns function not an object unlike built-in HTTP package
 
 const app = express();

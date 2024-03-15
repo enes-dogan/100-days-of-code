@@ -51,9 +51,7 @@ const TodosApp = {
         }
       } else {
         //Creating new todo
-
         let response;
-
         try {
           response = await fetch('http://localhost:3000/todos', {
             method: 'POST',

@@ -54,7 +54,7 @@ router.get('/posts/:id', async function (req, res, next) {
   let postId = req.params.id;
 
   try {
-    postId = new ObjectId(postId)
+    postId = new ObjectId(postId);
   } catch (error) {
     console.log(error);
     return res.status(404).render('404');

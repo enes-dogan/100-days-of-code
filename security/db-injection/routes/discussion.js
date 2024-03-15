@@ -25,8 +25,9 @@ router.get('/discussion', async function (req, res) {
 });
 
 router.post('/discussion/comment', async function (req, res) {
-
-  await db.query('INSERT INTO comments (author, text) VALUES (?)', [[req.body.name, req.body.comment]])
+  await db.query('INSERT INTO comments (author, text) VALUES (?)', [
+    [req.body.name, req.body.comment],
+  ]);
 
   res.redirect('/discussion');
 });
